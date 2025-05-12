@@ -1,0 +1,30 @@
+# Node.js
+node_modules
+build
+.env
+
+# Python
+/backend/__pycache__/
+/backend/.env
+/backend/venv/
+*.pyc
+
+# SQLite DB (optional)
+backend/leaders.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Python virtual environment
+env/
+venv/
+ENV/
