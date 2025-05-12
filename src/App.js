@@ -5,7 +5,7 @@ export default function App() {
   const [leaders, setLeaders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/leaders")
+    fetch("${process.env.REACT_APP_API_URL}/leaders")
       .then(res => res.json())
       .then(data => setLeaders(data));
   }, []);
