@@ -5,10 +5,16 @@ export default function App() {
   const [leaders, setLeaders] = useState([]);
 
   useEffect(() => {
-    fetch("${process.env.REACT_APP_API_URL}/leaders")
-      .then(res => res.json())
-      .then(data => setLeaders(data));
-  }, []);
+  fetch("http://localhost:8000/api/leaders")  // or use your deployed API endpoint
+    .then(res => res.json())
+    .then(data => {
+      console.log("✅ Fetched leaders:", data);  // this should now show 6-7 objects
+      setLeaders(data);
+    })
+    .catch(err => {
+      console.error("❌ Failed to fetch leaders:", err);
+    });
+}, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 p-10">

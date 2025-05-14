@@ -10,7 +10,7 @@ build
 *.pyc
 
 # SQLite DB (optional)
-backend/leaders.db
+# backend/leaders.db
 
 # Logs and temp files
 *.log
