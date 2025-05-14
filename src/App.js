@@ -5,7 +5,7 @@ export default function App() {
   const [leaders, setLeaders] = useState([]);
 
   useEffect(() => {
-  fetch("http://localhost:8000/api/leaders")  // or use your deployed API endpoint
+  fetch("${process.env.REACT_APP_API_URL}/leaders")  // or use your deployed API endpoint
     .then(res => res.json())
     .then(data => {
       console.log("✅ Fetched leaders:", data);  // this should now show 6-7 objects
